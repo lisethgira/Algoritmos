@@ -1,0 +1,36 @@
+class car: 
+    #atributos 
+    brand = "hundai" 
+    color = "blue" 
+    model = 2020 
+    license = "YPQ-56F" 
+    position = [0,0,0]
+
+    #constructor 
+    def __init__(self, license, position,color): 
+        self.license = license 
+        self.position = position 
+        self.color = color 
+
+    #Metodos 
+    def avanzar(self, distancia): 
+        self.position = self.position + distancia 
+    def retroceder(self, distancia): 
+        self.position =self.position - distancia 
+        
+objcar1 = car ("PEM-123", 0, "negro") 
+objcar2 = car ("KTY-245", 0, "rojo") 
+
+print (objcar1.model) 
+print (objcar2.license) 
+print (objcar1.color) 
+print (objcar2.model) 
+print (objcar1.license) 
+print (objcar2.color) 
+
+objcar1.avanzar(10) 
+print(objcar1.position) 
+objcar1.avanzar(5) 
+print(objcar1.position) 
+objcar1.retroceder(8) 
+print(objcar1.position)   
